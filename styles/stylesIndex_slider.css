@@ -1,0 +1,126 @@
+
+.contenedor {
+    background:black;
+    padding-top: 15px;
+    padding-bottom: 45px;
+
+  }
+  .slider{
+      background-color: silver;
+  }
+  
+  /* Slides */
+  .slider input {
+    display: none;
+  }
+  
+  /* Buttons */
+  .slider label {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 11em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: whitesmoke;
+    background: darkgray;
+    padding: 1em 1em;
+    opacity: .3;
+    font-size: 40px;
+    font-family: fantasy;
+    font-weight: bold;
+    transition: .25s;
+    
+  }
+  .slider label:hover {
+    opacity: 0.6;
+  }
+  .previous {
+    margin-left: -400px;
+  }
+  .next {
+    margin-left: 400px;
+  }
+  
+  #slide1:checked ~ .buttons .slide1 {
+    display: block;
+  }
+  #slide2:checked ~ .buttons .slide2 {
+    display: block;
+  }
+  #slide3:checked ~ .buttons .slide3 {
+    display: block;
+  }
+  #slide4:checked ~ .buttons .slide4 {
+    display: block;
+  }
+  
+  /* Images */
+  .slider {
+    top: 30%;
+    left: 50%;
+    width: 900px;
+    height: 620px; 
+    margin: 0 auto;
+    white-space: nowrap;
+    padding: 0;
+    transition: .25s;
+     overflow: hidden; 
+     border-radius: 10px;
+    box-shadow: 0 0 0 0 #e8e8e8,
+                0 0 1em 0 #eaebe4,
+                0 0 1em 0 black,
+                0.1em 0.1em 1em 0 white;
+  }
+  .slide {
+    width: 500em;
+    transition: .25s;
+  }
+  .slider img {
+    float: left;
+    width: 900px;
+    /* height: 400px; */
+  }
+  
+  #slide1:checked ~ .slide {
+    margin: 0;
+  }
+  #slide2:checked ~ .slide {
+    margin: 0 0 0 -900px;
+  }
+  #slide3:checked ~ .slide {
+    margin: 0 0 0 -1800px;
+  }
+  #slide4:checked ~ .slide {
+    margin: 0 0 0 -2700px;
+  }
+
+  
+@media(max-width: 850px){
+    .slider img {
+        float: left;
+        width: 400px;
+      }
+      .slider {
+        width: 400px;
+        height: 300px; 
+      }
+      .slider label {
+          top: 8em;
+      }
+      #slide2:checked ~ .slide {
+        margin: 0 0 0 -400px;
+      }
+      #slide3:checked ~ .slide {
+        margin: 0 0 0 -800px;
+      }
+      #slide4:checked ~ .slide {
+        margin: 0 0 0 -1200px;
+      }
+      .previous {
+        margin-left: -150px;
+      }
+      .next {
+        margin-left: 150px;
+      }
+}

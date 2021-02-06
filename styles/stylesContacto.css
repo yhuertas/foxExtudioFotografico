@@ -1,0 +1,180 @@
+
+.formulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+}
+.contenedor{
+    background-color: white;
+    border-radius: 15px;
+    border: yellow 3px solid;   
+    width: 60%;
+    display: block;
+    text-align: center;
+}
+.formular{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.contenedor form{
+    background-color: white;
+    width: 60%;
+}
+
+h1{
+    font-size: 35px;
+}
+h1,h2{
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+input, textarea{
+    width: 99%;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    color: lightgray;
+}
+textarea{ 
+    height: 120px;   
+    min-width: 50%;
+    min-height: 50px;
+    max-width: 100%;
+    max-height: 150px;
+    overflow: auto;
+}
+
+.ch{
+    display: block;
+    background-color: white;
+    align-items: center;   
+}
+.ch:hover{
+    cursor: pointer;
+}
+.ch input{
+    width: 13px;
+    height: 13px;
+    margin:10px auto;
+}
+#boton{
+    width: 300px;
+    color: black;
+} 
+.bot{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+} 
+#boton:hover{
+    cursor: pointer;
+    background-color: lightgoldenrodyellow;
+}
+.condiciones{
+    background: white;
+    text-decoration: none;
+    border-radius: 25px;
+}
+/*Estilos ventana condiciones*/
+.fondo_transparente {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 100;
+    opacity:0;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+.fondo_transparente:target {
+    opacity:1;
+    pointer-events: auto;
+    height: 100%;
+}
+.modal{
+    position: fixed;
+    padding: 5px 20px 13px 20px;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.fondo_transparente:target .resize{
+    margin:15%;
+    height:auto;
+}
+.resize {
+    margin: 25%;
+    width:500px;
+    height:250px;
+}
+.close {
+    background: lightgoldenrodyellow;
+    color: black;
+    line-height: 40px;
+    position: absolute;
+    right: 1px;
+    text-align: center;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 40px;
+    border: black 2px solid;
+ }
+.close:hover {
+    background: yellow;
+    color: black;
+}
+.modal_titulo{
+    font-size: 40px;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+}
+.modal_mensaje{
+    font-size: 14px;
+    text-align: justify;  
+}
+.modal_mensaje p{
+    background-color: white;
+}
+
+
+
+/*Responsive*/
+@media(max-width: 850px){
+    .contenedor{
+        width: 100%;
+    }
+    .contenedor form{
+        width: 95%;
+        height: 10%;
+    }
+    .modal_titulo{
+        font-size: 25px;
+    }
+    .modal{
+        width: 90%;
+    }
+    .modal_mensaje{
+        width: 100%;
+    }
+    .fondo_transparente:target .resize{
+        width:80%;
+        margin: 30%;
+    }
+    .resize {
+        margin: 60%;
+    }
+
+}

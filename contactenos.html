@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[FOX]-Contáctenos</title>
+    <link rel="stylesheet" href="styles/stylesIndex_nav.css">
+    <link rel="stylesheet" href="styles/stylesIndex_res.css">
+    <link rel="stylesheet" href="styles/stylesContacto.css">
+</head>
+
+<body>
+    <header class="Encabezado">
+        <div class="img-menu">
+            <!-- logo -->
+            <a href="index.html"><img class="img_logo" src="images/Logo_Fox.png" alt="Logo Fox"></a>
+        </div>
+
+    </header>
+
+
+    <header class="main_menu">
+        <input type="checkbox" id="btnMenu">
+        <label class="icono_menu" for="btnMenu">
+            <img src="images/menu_mini.png" alt="Menu mini" height="35">
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" title="Inicio"><img src="images/Home_icon.png" alt="home icono"></a></li>
+                <!-- quienes somos -->
+                <li class="li"><a href="quienesSomos.html">Quienes Somos</a></li>
+                <!-- portafolio -->
+                <li class="li"><a href="portafolio.html">Portafolio</a></li>
+                <!-- contactenos *js -->
+                <li class="li"><a href="contactenos.html">Contáctenos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- formulario de contacto -->
+    <section class="formulario">
+        <div class="contenedor">
+            <h1>Contáctenos</h1>
+            <h2>Ingrese los siguientes datos y en breve recibiras respuesta.</h2>
+            <div class="formular">
+                <form action="" onsubmit="return validarTerninos();">
+                    <input required type="text" name="nombre" id="txtNombre" placeholder="Nombre" maxlength="50"
+                        minlength="3">
+                    <input required type="email" name="correo" id="email" placeholder="Correo Electrónico">
+                    <input required type="number" name="telefono" id="telefono" placeholder="Teléfono" minlength="7"
+                        maxlength="12">
+                    <textarea required name="mensaje" id="textarea" rows="10" minlength="10"
+                        placeholder="Escriba aquí su mensaje"></textarea>
+                    <label for="textarea"></label>
+                    <label class="ch">
+                        <input type='checkbox' value='SI' id='aceptar' /> He leído y acepto las <a href="#ventanaModal"
+                            class="condiciones">condiciones</a>
+                    </label>
+                    <br>
+                    <div class="bot">
+                        <input type="submit" id="boton" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Ventana modal Condiciones -->
+    <div id="ventanaModal" class="fondo_transparente">
+        <div class="modal resize">
+            <div class="modal_cerrar">
+                <a href="#" title="Cerrar" class="close">X</a>
+            </div>
+            <div class="modal_titulo">Condiciones</div>
+            <div class="modal_mensaje">
+                <p>
+                    En cumplimiento a lo dispuesto en el Decreto 1377 de 2013, reglamentario de la Ley Estatutaria 1581
+                    de 2012 y demás normas concordantes, mediante las cuales se dictan disposiciones generales para la
+                    protección de datos personales, <b style="background-color: white;"> FOX estudio fotográfico</b>
+                    como tratante de los datos obtenidos, solicita de su autorización para realizar el tratamiento de
+                    sus datos personales, los cuales serán incorporados en nuestra base de datos.
+                    <br> <br>
+                    Los datos personales obtenidos serán usados en forma exclusiva para fines de contacto y estadística.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="lista-redes">
+        <div class="redes">
+            <a href="https://wa.me/573144383831" target="_blank">
+                <img class="img_Redes" src="images/redes/whatsapp.png" alt="Logo whatsapp"></a>
+            <a href="https://www.facebook.com/FOX-Estudio-Fotografico-101575095057133" target="_blank">
+                <img class="img_Redes" src="images/redes/facebook.png" title="facebook" alt="LogoFacebook"></a>
+            <a href="https://www.instagram.com/foxestudiofotografico" target="_blank">
+                <img class="img_Redes" src="images/redes/instagram.png" alt="instagram"></a>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>Version 1.0</p>
+            <p>2021</p>
+            <!-- nombre  -->
+            <p>Creado por <a href="https://www.facebook.com/yamid.huertas" style="color: whitesmoke;" target="_blank">
+                    Yamid Huertas</a></p>
+        </div>
+    </footer>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>
